@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build Packet Capture",
+			"type": "shell",
+			"command": "gcc",
+			"args": [
+				"-o",
+				"build/packet_capture.exe",
+				"src/packet_capture.c",
+				"src/pcap_stub.c",
+				"-I",
+				"src",
+				"-lwpcap",
+				"-lws2_32"
+			],
+			"group": "build"
+		}
+	]
+}
